@@ -9,7 +9,7 @@ class Word {
   };
 
   lookUp () {
-    if (this.language === 'Japanese') {
+    if (this.language === "Japanese") {
       return `http://jisho.org/search/${this.word}`;
     } else {
       return `http://en.wiktionary.org/wiki/${this.word}`;
@@ -19,17 +19,17 @@ class Word {
 
 class EnglishWord extends Word {
   constructor (word) {
-    super(word, 'English');
+    super(word, "English");
   }
 };
 class JapaneseWord extends Word {
   constructor (word) {
-    super(word, 'Japanese');
+    super(word, "Japanese");
   }
 };
 
-const japaneseWord = new JapaneseWord('犬');
-const englishWord = new EnglishWord('dog');
+const japaneseWord = new JapaneseWord("犬");
+const englishWord = new EnglishWord("dog");
 console.log(japaneseWord.word);
 console.log(japaneseWord.count());
 console.log(japaneseWord.lookUp());
