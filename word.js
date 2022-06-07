@@ -1,6 +1,7 @@
 class Word {
   constructor (word, language) {
     this.word = word;
+    this.language = language;
   };
 
   count () {
@@ -18,14 +19,12 @@ class Word {
 
 class EnglishWord extends Word {
   constructor (word) {
-    super(word);
-    this.language = 'English';
+    super(word, 'English');
   }
 };
 class JapaneseWord extends Word {
   constructor (word) {
-    super(word);
-    this.language = 'Japanese';
+    super(word, 'Japanese');
   }
 };
 
