@@ -13,7 +13,6 @@ class Word {
     return this.lookUpUrl + this.word;
   }
 };
-
 class EnglishWord extends Word {
   constructor (word) {
     super(word, "English", "http://en.wiktionary.org/wiki/");
@@ -25,11 +24,4 @@ class JapaneseWord extends Word {
   };
 };
 
-const japaneseWord = new JapaneseWord("犬");
-const englishWord = new EnglishWord("dog");
-console.log(japaneseWord.word);
-console.log(japaneseWord.count());
-console.log(japaneseWord.lookUp());
-console.log(englishWord.word);
-console.log(englishWord.count());
-console.log(englishWord.lookUp());
+module.exports = { Word, JapaneseWord, EnglishWord };
