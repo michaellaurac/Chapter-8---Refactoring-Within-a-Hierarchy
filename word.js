@@ -1,5 +1,5 @@
 class Word {
-  constructor (word, language) {
+  constructor (word, language = "English") {
     this.word = word;
     this.language = language;
   };
