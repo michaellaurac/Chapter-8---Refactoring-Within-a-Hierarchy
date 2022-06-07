@@ -11,12 +11,13 @@ const deepEqual = require("deep-equal");
 /* eslint-env mocha */
 
 const wish = require("wish");
-const { Word, JapaneseWord, EnglishWord } = require("./word.js");
+const { Word, JapaneseWord, EnglishWord } = require("./word_class.js");
 
 describe("the file", () => {
   // setup test
   it("sets welcome message", () => {
-    wish(welcomeMessage() === "Welcome to test.js!");
+    console.log(welcomeMessage());
+    wish(welcomeMessage() === "Welcome to word_class_test.js!");
   });
 
   const japaneseWord = new JapaneseWord("犬");
