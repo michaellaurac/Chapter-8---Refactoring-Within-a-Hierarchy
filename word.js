@@ -1,5 +1,5 @@
 class Word {
-  constructor (word, language = "English", lookUpUrl) {
+  constructor (word, language, lookUpUrl) {
     this.word = word;
     this.language = language;
     this.lookUpUrl = lookUpUrl;
