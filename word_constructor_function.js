@@ -1,4 +1,7 @@
 function Word (word, language, loopUpUrl) {
+  this.word = word;
+  this.language = language;
+  this.loopUpUrl = loopUpUrl;
   this.count = function () {
     return this.word.length;
   };
@@ -8,17 +11,11 @@ function Word (word, language, loopUpUrl) {
 };
 
 function EnglishWord (word) {
-  Word.call(this);
-  this.word = word;
-  this.language = "English";
-  this.loopUpUrl = "http://en.wiktionary.ord/wiki/";
+  Word.call(this, word, "English", "http://en.wiktionary.org/wiki/");
 }
 
 function JapaneseWord (word) {
   Word.call(this, word, "Japanese", "http://jisho.org/search/");
-  this.word = word;
-  this.language = "Japanese";
-  this.loopUpUrl = "http://jisho.org/search/";
 }
 
 JapaneseWord.prototype = Object.create(Word.prototype);
@@ -26,8 +23,4 @@ JapaneseWord.prototype.constructor = JapaneseWord;
 EnglishWord.prototype = Object.create(Word.prototype);
 EnglishWord.prototype.constructor = EnglishWord;
 
-Word.prototype.reportLanguage = function () {
-  return `The language is ${this.language}`;
-};
-const japaneseWord = new JapaneseWord("犬");
-console.log(japaneseWord.reportLanguage());
+module.exports = { Word, JapaneseWord, EnglishWord };
