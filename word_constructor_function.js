@@ -25,3 +25,9 @@ JapaneseWord.prototype = Object.create(Word.prototype);
 JapaneseWord.prototype.constructor = JapaneseWord;
 EnglishWord.prototype = Object.create(Word.prototype);
 EnglishWord.prototype.constructor = EnglishWord;
+
+Word.prototype.reportLanguage = function () {
+  return `The language is ${this.language}`;
+};
+const japaneseWord = new JapaneseWord("犬");
+console.log(japaneseWord.reportLanguage());
