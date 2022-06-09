@@ -11,13 +11,16 @@ const welcomeMessage = () => {
 
 const wish = require("wish");
 // const deepEqual = require("deep-equal");
-const { japaneseWord, englishWord } = require("./word_object_literal.js");
+const { japaneseWordFactory, englishWordFactory } = require("./word_factory_function.js");
 
 describe("the file", () => {
   // setup test
   it("sets welcome message", () => {
-    wish(welcomeMessage() === "Welcome to word_object_literal_test.js!");
+    wish(welcomeMessage() === "Welcome to word_factory_function_test.js!");
   });
+
+  const englishWord = englishWordFactory("dog");
+  const japaneseWord = japaneseWordFactory("犬");
 
   // interfaces tests
   it("creates a japanese word", () => {
