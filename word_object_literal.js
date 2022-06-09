@@ -19,4 +19,11 @@ const japaneseWord = Object.assign(Object.create(word), {
   lookUpUrl: "http://jisho.org/search/"
 });
 
+japaneseWord.prototype = word;
+englishWord.prototype = word;
+
+word.reportLanguage = function () {
+  return `The language is ${this.language}`;
+};
+
 module.exports = { japaneseWord, englishWord };

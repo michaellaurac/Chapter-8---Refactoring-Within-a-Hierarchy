@@ -24,12 +24,14 @@ describe("the file", () => {
     wish(japaneseWord.word === "犬");
     wish(japaneseWord.language === "Japanese");
     wish(japaneseWord.count() === 1);
+    wish(japaneseWord.reportLanguage() === "The language is Japanese");
   });
 
   it("creates an english word", () => {
     wish(englishWord.word === "dog");
     wish(englishWord.language === "English");
     wish(englishWord.count() === 3);
+    wish(englishWord.reportLanguage() === "The language is English");
   });
 
   // internals tests

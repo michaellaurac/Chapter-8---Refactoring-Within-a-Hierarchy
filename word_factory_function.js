@@ -23,4 +23,8 @@ const japaneseWordFactory = (theWord) => {
   });
 };
 
+word.reportLanguage = function () {
+  return `The language is ${this.language}`;
+};
+
 module.exports = { japaneseWordFactory, englishWordFactory };
