@@ -16,7 +16,6 @@ const { Word, JapaneseWord, EnglishWord } = require("./word_constructor_function
 describe("the file", () => {
   // setup test
   it("sets welcome message", () => {
-    console.log(welcomeMessage());
     wish(welcomeMessage() === "Welcome to word_constructor_function_test.js!");
   });
 
