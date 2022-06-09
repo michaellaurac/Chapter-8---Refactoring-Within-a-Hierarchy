@@ -10,7 +10,6 @@ const welcomeMessage = () => {
 /* eslint-env mocha */
 
 const wish = require("wish");
-// const deepEqual = require("deep-equal");
 const { japaneseWordFactory, englishWordFactory } = require("./word_factory_function.js");
 
 describe("the file", () => {
