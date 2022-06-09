@@ -7,14 +7,16 @@ const word = {
   }
 };
 
-const englishWord = Object.create(word);
-englishWord.word = "dog";
-englishWord.language = "English";
-englishWord.lookUpUrl = "http://en.wiktionary.org/wiki/";
+const englishWord = Object.assign(Object.create(word), {
+  word: "dog",
+  language: "English",
+  lookUpUrl: "http://en.wiktionary.org/wiki/"
+});
 
-const japaneseWord = Object.create(word);
-japaneseWord.word = "犬";
-japaneseWord.language = "Japanese";
-japaneseWord.lookUpUrl = "http://jisho.org/search/";
+const japaneseWord = Object.assign(Object.create(word), {
+  word: "犬",
+  language: "Japanese",
+  lookUpUrl: "http://jisho.org/search/"
+});
 
 module.exports = { japaneseWord, englishWord };
