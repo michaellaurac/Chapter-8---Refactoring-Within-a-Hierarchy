@@ -16,3 +16,5 @@ const japaneseWord = Object.create(word);
 japaneseWord.word = "犬";
 japaneseWord.language = "Japanese";
 japaneseWord.lookUpUrl = "http://jisho.org/search/";
+
+module.exports = { japaneseWord, englishWord };
