@@ -10,7 +10,6 @@ const welcomeMessage = () => {
 /* eslint-env mocha */
 
 const wish = require("wish");
-// const deepEqual = require("deep-equal");
 const { japaneseWord, englishWord } = require("./word_object_literal.js");
 
 describe("the file", () => {
@@ -37,31 +36,11 @@ describe("the file", () => {
   // internals tests
   it("uses the appropriate word prototype for the japanese word", () => {
     wish(typeof japaneseWord === "object");
-    // wish(typeof JapaneseWord === "function");
-    // wish(japaneseWord instanceof JapaneseWord);
-    // wish(japaneseWord instanceof Word);
-    // wish(!(JapaneseWord instanceof Word));
-
-    // wish(japaneseWord.constructor === JapaneseWord);
-    // wish(Object.getPrototypeOf(JapaneseWord) === Word);
-    // console.log(Object.getPrototypeOf(JapaneseWord));
-
-    // wish(deepEqual(Object.getPrototypeOf(japaneseWord), {}));
     console.log(Object.getPrototypeOf(japaneseWord));
   });
 
   it("uses the appropriate word prototype for the english word", () => {
     wish(typeof englishWord === "object");
-    // wish(typeof EnglishWord === "function");
-    // wish(englishWord instanceof EnglishWord);
-    // wish(englishWord instanceof Word);
-    // wish(!(EnglishWord instanceof Word));
-
-    // wish(englishWord.constructor === EnglishWord);
-    // wish(Object.getPrototypeOf(EnglishWord) === Word);
-    // console.log(Object.getPrototypeOf(EnglishWord));
-
-    // wish(deepEqual(Object.getPrototypeOf(englishWord), {}));
     console.log(Object.getPrototypeOf(englishWord));
   });
 });
